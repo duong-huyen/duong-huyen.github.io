@@ -44,10 +44,6 @@ function funcLogin_1()
   document.getElementById("login").appendChild(br);
   document.getElementById("login").appendChild(t);
 
-  // let text = document.getElementById("fname").value;
-  // let n = text.search(/((Q|q)u(a|ả)|)( |)(H|h)(o|ồ)ng/i);
-  // document.getElementById("demo").innerHTML = n;
-
   var x = document.createElement("input");
   x.setAttribute("type", "text");
   x.setAttribute("value", "");
@@ -69,7 +65,7 @@ function funcLogin_1()
   function funcLogin_2()
   {
     let text = document.getElementById("txtAns").value;
-    let n = text.search(/((Q|q)u(a|ả)|)( |)(H|h)(o|ồ)ng/i);
+    let n = text.search(/^((Q|q)u(a|ả) |)(H|h)(o|ồ)ng$/i);
     if (n >= 0)
     {
       document.getElementById("demo").innerHTML = "Finally!";
@@ -91,8 +87,8 @@ function funcLogin_1()
   var input = document.getElementById("txtAns");
   input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
-     event.preventDefault();
-    //  document.getElementById("btnNext").click();
+      event.preventDefault();
+      document.getElementById("btnNext").click();
     }
   });
 </script> -->
