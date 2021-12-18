@@ -3,6 +3,8 @@ layout: default_noheader
 title: Login
 ---
 
+<div w3-include-html="index.html"></div>
+
 <h2>Đăng Nhập</h2>
 
 <p id="login">Sinh nhật ba dơ vào ngày nào?<br>(không biết thì nhấn tiếp tục)</p>
@@ -71,10 +73,26 @@ function funcLogin_1()
     if (n >= 0)
     {
       document.getElementById("demo").innerHTML = "Finally!";
+      window.location.href = "pages";
+      // window.location.href = window.location.pathname + "test.html"
+      // var currentURL = window.location.href;
+      // newURL = currentURL.replace(/[?|=|&]/g, "/");
+      // // window.location=newURL;
+      // document.getElementById("demo").innerHTML = newURL;
     }
     else
     {
       document.getElementById("demo").innerHTML = "What???";
     }
   }
-  </script>
+</script>
+
+<!-- <script>
+  var input = document.getElementById("txtAns");
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+     event.preventDefault();
+    //  document.getElementById("btnNext").click();
+    }
+  });
+</script> -->
