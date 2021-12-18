@@ -14,8 +14,9 @@ title: Login
 <script>
   var x = document.createElement("input");
   x.setAttribute("type", "text");
-  x.setAttribute("value", "dd/mm/yy");
+  x.setAttribute("value", "không biết");
   x.setAttribute("id", "txtAns");
+  x.setAttribute("readonly", "readonly");;
   var br = document.createElement("br");
   document.getElementById("login").appendChild(br);
   document.getElementById("login").appendChild(x);
@@ -26,6 +27,14 @@ title: Login
   x.setAttribute("id", "btnNext");
   x.setAttribute("onclick", "funcLogin_1()");
   document.getElementById("login").appendChild(x);
+
+  var input = document.getElementById("txtAns");
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      document.getElementById("btnNext").click();
+    }
+  });
 </script>
 
 <script>
@@ -58,6 +67,16 @@ function funcLogin_1()
   x.setAttribute("id", "btnNext");
   x.setAttribute("onclick", "funcLogin_2()");
   document.getElementById("login").appendChild(x);
+
+  document.getElementById("txtAns").focus();
+
+  var input = document.getElementById("txtAns");
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      document.getElementById("btnNext").click();
+    }
+  });
 }
 </script>
 
