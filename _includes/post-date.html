@@ -1,4 +1,9 @@
 <span class="post-date">
+  {% if page.author %}
+    {{ page.author }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
   {{ site.data.settings.post_date_prefix }}
   {% assign d = page.date | date: "%-d"  %}
   {{ page.date | date: "%B" }}
@@ -8,10 +13,10 @@
     {% when '3' or '23' %}{{ d }}rd
     {% else %}{{ d }}th{% endcase %},
   {{ page.date | date: "%Y" }}
-  by
+  <!-- bởi
   {% if page.author %}
     {{ page.author }}
   {% else %}
     {{ site.author }}
-  {% endif %}
+  {% endif %} -->
 </span>
