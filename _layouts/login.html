@@ -1,0 +1,74 @@
+---
+layout: default_noheader
+title: Login
+---
+
+<!-- <h2 id="login">Đăng Nhập</h2> -->
+<h2>Đăng Nhập</h2>
+
+<p id="login">Sinh nhật ba dơ vào ngày nào?</p>
+
+<script>
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", "Hello World!");
+  
+  var br = document.createElement("br");
+  // document.body.appendChild(br);
+  document.getElementById("login").appendChild(br);
+
+  // document.body.appendChild(x);
+  document.getElementById("login").appendChild(x);
+</script>
+
+<input type="text" id="txtAns" name="txtAns" value="dd/mm/yy"></input>
+<button onclick="myFunction()">tiếp tục</button>
+
+<!-- <form onsubmit="myFunction()"">
+  <label for="fname">Sinh nhật ba dơ vào ngày nào?</label><br><br>
+  <input type="text" id="fname" name="fname" value="30/01/2000"><br>
+</form>
+
+<br>
+
+<button type="button"
+  onclick="myFunction()"">
+  Tiếp tục
+</button>
+
+<br>
+
+<p id="demo">Sinh nhật ba dơ vào ngày nào?</p> -->
+
+<script>
+function myFunction()
+{
+  // let text = document.getElementById("fname").value;
+  // let n = text.search(/((Q|q)u(a|ả)|)( |)(H|h)(o|ồ)ng/i);
+  // document.getElementById("demo").innerHTML = n;
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", "Hello World!");
+  
+  var br = document.createElement("br");
+  // document.body.appendChild(br);
+  document.getElementById("login").appendChild(br);
+
+  // document.body.appendChild(x);
+  document.getElementById("login").appendChild(x);
+  
+  var t = document.createTextNode("sai òi");
+  
+  var br = document.createElement("br");
+  // document.body.appendChild(br);
+  document.getElementById("login").appendChild(br);
+  document.getElementById("login").appendChild(br);
+  
+  document.getElementById("login").appendChild(t);
+
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "button");
+  x.setAttribute("value", "Hello World!");
+  document.getElementById("login").appendChild(x);
+}
+</script>
