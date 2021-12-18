@@ -3,72 +3,78 @@ layout: default_noheader
 title: Login
 ---
 
-<!-- <h2 id="login">Đăng Nhập</h2> -->
 <h2>Đăng Nhập</h2>
 
-<p id="login">Sinh nhật ba dơ vào ngày nào?</p>
+<p id="login">Sinh nhật ba dơ vào ngày nào?<br>(không biết thì nhấn tiếp tục)</p>
+
+<p id="demo"></p>
 
 <script>
-  var x = document.createElement("INPUT");
+  var x = document.createElement("input");
   x.setAttribute("type", "text");
-  x.setAttribute("value", "Hello World!");
-  
+  x.setAttribute("value", "dd/mm/yy");
+  x.setAttribute("id", "txtAns");
   var br = document.createElement("br");
-  // document.body.appendChild(br);
   document.getElementById("login").appendChild(br);
+  document.getElementById("login").appendChild(x);
 
-  // document.body.appendChild(x);
+  var x = document.createElement("input");
+  x.setAttribute("type", "button");
+  x.setAttribute("value", "tiếp tục");
+  x.setAttribute("id", "btnNext");
+  x.setAttribute("onclick", "funcLogin_1()");
   document.getElementById("login").appendChild(x);
 </script>
 
-<input type="text" id="txtAns" name="txtAns" value="dd/mm/yy"></input>
-<button onclick="myFunction()">tiếp tục</button>
-
-<!-- <form onsubmit="myFunction()"">
-  <label for="fname">Sinh nhật ba dơ vào ngày nào?</label><br><br>
-  <input type="text" id="fname" name="fname" value="30/01/2000"><br>
-</form>
-
-<br>
-
-<button type="button"
-  onclick="myFunction()"">
-  Tiếp tục
-</button>
-
-<br>
-
-<p id="demo">Sinh nhật ba dơ vào ngày nào?</p> -->
-
 <script>
-function myFunction()
+function funcLogin_1()
 {
+  document.getElementById("btnNext").remove();
+  document.getElementById("txtAns").setAttribute("id", "txtAns_");;
+
+  var t = document.createTextNode("lêu lêu...");
+  var br = document.createElement("br");
+  document.getElementById("login").appendChild(br);
+  document.getElementById("login").appendChild(t);
+
+  var t = document.createTextNode("Quả gì cả Heo và Dơ cùng thích?");
+  var br = document.createElement("br");
+  document.getElementById("login").appendChild(br);
+  document.getElementById("login").appendChild(t);
+
   // let text = document.getElementById("fname").value;
   // let n = text.search(/((Q|q)u(a|ả)|)( |)(H|h)(o|ồ)ng/i);
   // document.getElementById("demo").innerHTML = n;
-  var x = document.createElement("INPUT");
+
+  var x = document.createElement("input");
   x.setAttribute("type", "text");
-  x.setAttribute("value", "Hello World!");
-  
+  x.setAttribute("value", "");
+  x.setAttribute("id", "txtAns");
   var br = document.createElement("br");
-  // document.body.appendChild(br);
   document.getElementById("login").appendChild(br);
-
-  // document.body.appendChild(x);
   document.getElementById("login").appendChild(x);
-  
-  var t = document.createTextNode("sai òi");
-  
-  var br = document.createElement("br");
-  // document.body.appendChild(br);
-  document.getElementById("login").appendChild(br);
-  document.getElementById("login").appendChild(br);
-  
-  document.getElementById("login").appendChild(t);
 
-  var x = document.createElement("INPUT");
+  var x = document.createElement("input");
   x.setAttribute("type", "button");
-  x.setAttribute("value", "Hello World!");
+  x.setAttribute("value", "tiếp tục");
+  x.setAttribute("id", "btnNext");
+  x.setAttribute("onclick", "funcLogin_2()");
   document.getElementById("login").appendChild(x);
 }
 </script>
+
+<script>
+  function funcLogin_2()
+  {
+    let text = document.getElementById("txtAns").value;
+    let n = text.search(/((Q|q)u(a|ả)|)( |)(H|h)(o|ồ)ng/i);
+    if (n >= 0)
+    {
+      document.getElementById("demo").innerHTML = "Finally!";
+    }
+    else
+    {
+      document.getElementById("demo").innerHTML = "What???";
+    }
+  }
+  </script>
