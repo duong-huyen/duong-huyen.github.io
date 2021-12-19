@@ -12,10 +12,10 @@ permalink:           /:title
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "gia đình heo"
+title:		           "home"
 # "a minimalist Jekyll theme for running a blog or publication"
 description:	       "quản lý"
-author:              "Dơ (based on Paul Le's millennial-3 Jekyll theme)"
+author:              "D. (based on Paul Le's millennial-3 Jekyll theme)"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:

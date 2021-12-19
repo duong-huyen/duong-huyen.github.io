@@ -4,4 +4,4 @@ title: giới thiệu
 permalink: /about
 ---
 
-Nơi chứa kỷ niệm của Heo và Dơ.
+Nơi chứa kỷ niệm của Huyền và Dương.
