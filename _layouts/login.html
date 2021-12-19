@@ -5,11 +5,11 @@ title: Login
 
 <div w3-include-html="index.html"></div>
 
-<h2>Đăng Nhập</h2>
+<h2 align="center">Đăng Nhập</h2>
 
-<p id="login">Sinh nhật ba dơ vào ngày nào?<br>(không biết thì nhấn tiếp tục)</p>
+<p align="center" id="login">sinh nhật của Dơ vào ngày nào?</p>
 
-<p id="demo"></p>
+<p align="center" id="demo"></p>
 
 <script>
   var x = document.createElement("input");
@@ -46,9 +46,14 @@ function funcLogin_1()
   var t = document.createTextNode("lêu lêu...");
   var br = document.createElement("br");
   document.getElementById("login").appendChild(br);
-  document.getElementById("login").appendChild(t);
+  // document.getElementById("login").appendChild(t);
 
-  var t = document.createTextNode("Quả gì cả Heo và Dơ cùng thích?");
+  var img = document.createElement('img');
+  img.src = '../assets/img/no.png';
+  document.getElementById('login').appendChild(img);
+  img.style.offsetLeft
+
+  var t = document.createTextNode("quả gì cả Heo và Dơ cùng thích?");
   var br = document.createElement("br");
   document.getElementById("login").appendChild(br);
   document.getElementById("login").appendChild(t);
@@ -72,6 +77,7 @@ function funcLogin_1()
 
   var input = document.getElementById("txtAns");
   input.addEventListener("keyup", function(event) {
+    document.getElementById("demo").innerHTML = "";
     if (event.keyCode === 13) {
       event.preventDefault();
       document.getElementById("btnNext").click();
@@ -87,7 +93,7 @@ function funcLogin_1()
     let n = text.search(/^((T|t)r(a|á)i |((Q|q)u(a|ả) |))(H|h)(o|ồ)ng$/i);
     if (n >= 0)
     {
-      document.getElementById("demo").innerHTML = "Finally!";
+      document.getElementById("demo").innerHTML = "...";
       window.location.href = "pages";
       // window.location.href = window.location.pathname + "test.html"
       // var currentURL = window.location.href;
@@ -97,7 +103,7 @@ function funcLogin_1()
     }
     else
     {
-      document.getElementById("demo").innerHTML = "What???";
+      document.getElementById("demo").innerHTML = "hem đúng!";
     }
   }
 </script>
