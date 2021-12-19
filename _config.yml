@@ -15,8 +15,9 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 title:		           "H v D"
 # "a minimalist Jekyll theme for running a blog or publication"
 description:	       "blog"
-author:              "Huyền và Dương (based on Paul Le's millennial-3 Jekyll theme)"
+author:              "Huyền và Dương"
 
+# (based on Paul Le's millennial-3 Jekyll theme)
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
