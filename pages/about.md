@@ -4,4 +4,4 @@ title: giới thiệu
 permalink: /about
 ---
 
-Nơi chứa kỷ niệm của Huyền và Dương.
+Nơi lưu giữ kỷ niệm của Huyền và Dương.
