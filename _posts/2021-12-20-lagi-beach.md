@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Biển Lagi"
+title: "Du lịch biển Lagi"
 author: "Dương"
 categories: facts
 tags: [sample]
