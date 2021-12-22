@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Huyền Heo Radio"
+title: "Dumb FM"
 author: "Dương"
 categories: radio
 tags: [radio]
 image: radio.png
 ---
 
+Số đầu tiên và cũng có thể là số cuối cùng của <b>Dumb FM</b>. Đây là nơi tình cảm được gửi gắm thông qua các bài hát và người dẫn <b>D</b>.
